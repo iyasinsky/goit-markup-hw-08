@@ -1,0 +1,96 @@
+.form__title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $secondaryTextColor;
+}
+
+.form__field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form__field:focus-within .form__input,
+.form__field:focus-within .form__icon,
+.comment:focus-within .comment__area {
+  border-color: $accent;
+  fill: $accent;
+}
+
+.form__icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+
+  @include transitioned(fill);
+}
+
+.form__name {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.form__input {
+  padding: 12px 16px 12px 42px;
+  height: 40px;
+  outline: none;
+
+  @include transitioned(border-color);
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+  width: 425px;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 30px;
+
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+}
+
+.form__checkbox {
+  display: inline-block;
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $secondaryTextColor;
+  border-radius: 2px;
+
+  $propertyLocal: background-color, border-color;
+  @include transitioned($propertyLocal);
+}
+
+.form__label:hover .form__checkbox,
+.form__label:focus-within .form__checkbox {
+  border-color: $accent;
+}
+
+.checkbox:checked + .form__checkbox {
+  background-color: $accent;
+  border-color: $accent;
+  background-image: url('../images/icon-check.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.form__link {
+  display: inline-flex;
+  margin-left: 5px;
+  color: $accent;
+}

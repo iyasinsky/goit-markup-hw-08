@@ -1,0 +1,33 @@
+.contacts {
+  font-style: inherit;
+  font-size: inherit;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.contacts__text {
+  color: $primaryColor;
+  margin-bottom: 9px;
+}
+
+.contacts__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: $footerContacts;
+
+  @include transitioned(color);
+}
+
+.contacts__link:hover,
+.contacts__link:focus {
+  color: $accent;
+}

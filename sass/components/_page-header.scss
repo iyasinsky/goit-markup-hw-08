@@ -1,0 +1,47 @@
+.underline {
+  border-bottom: 1px solid $lineColor;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $lineColor;
+}
+
+.page-header__list {
+  display: flex;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  font-weight: 500;
+  font-size: inherit;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.page-header__contacts {
+  margin-left: auto;
+}
+
+.page-header__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.page-header__link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+
+  @include transitioned(color);
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
