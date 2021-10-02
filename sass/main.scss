@@ -1,5 +1,6 @@
 @import 'utils/variables';
 @import 'utils/mixin';
+@import 'utils/placeholder';
 @import 'utils/visually-hidden';
 @import 'utils/container';
 @import 'base/global-styles';
@@ -13,6 +14,7 @@
 @import 'components/comment';
 @import 'components/contacts';
 @import 'components/features';
+@import 'components/work';
 @import 'components/filter';
 @import 'components/form';
 @import 'components/page-footer';

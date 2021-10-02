@@ -1,3 +1,24 @@
+.work__title {
+  color: #212121;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.work__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -74,10 +95,6 @@ img {
   }
 }
 
-.section--no-padding-top {
-  padding-top: 0;
-}
-
 .section--color {
   background-color: #f5f4fa;
 }
@@ -103,33 +120,6 @@ img {
 
 .section__item:not(:last-child) {
   margin-right: 30px;
-}
-
-.section__box {
-  position: relative;
-}
-
-.section__text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 70px;
-  font-weight: 700;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .section__link {
@@ -714,6 +704,54 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   margin: 0;
+}
+
+.work {
+  display: none;
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+
+@media screen and (min-width: 1200px) {
+  .work {
+    display: block;
+  }
+}
+
+.work__list {
+  margin: -15px;
+}
+
+.work__item {
+  width: calc((100% - 6 * 15px) / 3);
+  margin: 15px;
+}
+
+.work__box {
+  position: relative;
+}
+
+.work__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 70px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .filter {
