@@ -8,13 +8,8 @@
   }
 }
 
-.section--color {
-  background-color: $secondaryColor;
-}
-
-// %mainList
+// %listReset
 .section__list {
-  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;

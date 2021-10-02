@@ -1,7 +1,9 @@
 .features {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  @extend %sectionPadding;
+}
+
+.features__list {
+  @extend %listReset;
 
   @media screen and (min-width: 768px) {
     display: flex;

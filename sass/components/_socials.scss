@@ -1,0 +1,44 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @extend %listReset;
+}
+
+.socials__list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  text-decoration: none;
+  border-radius: 50%;
+  fill: $linkColor;
+
+  $propertyLocal: fill, background-color;
+  @include transitioned($propertyLocal);
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    fill: $primaryColor;
+  }
+
+  &--color {
+    fill: $primaryColor;
+    background-color: rgba(255, 255, 255, 0.1);
+    @include transitioned(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: $accent;
+      fill: $primaryColor;
+    }
+  }
+}

@@ -13,8 +13,10 @@
 }
 
 .work__list {
-  @extend %mainList;
+  display: flex;
+  flex-wrap: wrap;
   margin: -15px;
+  @extend %listReset;
 }
 
 .work__item {

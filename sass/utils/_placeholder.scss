@@ -1,16 +1,30 @@
-%mainTitle {
-  color: $secondaryTextColor;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-top: 0;
-  margin-bottom: 50px;
+%sectionPadding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
-%mainList {
-  display: flex;
-  flex-wrap: wrap;
+%mainTitle {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $secondaryTextColor;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
+
+%listReset {
   list-style: none;
   padding: 0;
   margin: 0;
