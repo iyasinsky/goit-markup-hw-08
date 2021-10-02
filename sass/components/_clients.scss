@@ -1,0 +1,50 @@
+.clients {
+  @extend %sectionPadding;
+}
+
+.clients__title {
+  @extend %mainTitle;
+}
+
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+
+  @extend %listReset;
+}
+
+.clients__item {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  width: calc((100% - 4 * 15px) / 2);
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 6 * 15px) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 12 * 15px) / 6);
+  }
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  fill: $linkColor;
+  border: 1px solid $linkColor;
+  border-radius: 4px;
+
+  $propertyLocal: border-color, fill;
+  @include transitioned($propertyLocal);
+
+  &:hover,
+  &:focus {
+    fill: $accent;
+    border-color: $accent;
+  }
+}

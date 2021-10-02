@@ -1,16 +1,16 @@
-.features, .team {
+.features, .team, .clients {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
-  .features, .team {
+  .features, .team, .clients {
     padding-top: 94px;
     padding-bottom: 94px;
   }
 }
 
-.work__title, .team__title {
+.work__title, .team__title, .clients__title {
   font-weight: 700;
   font-size: 28px;
   line-height: 1.18;
@@ -21,14 +21,14 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .work__title, .team__title {
+  .work__title, .team__title, .clients__title {
     font-size: 36px;
     line-height: 1.17;
     margin-bottom: 50px;
   }
 }
 
-.features__list, .work__list, .team__list, .socials {
+.features__list, .work__list, .team__list, .socials, .clients__list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -687,7 +687,7 @@ img {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.team--color {
+.team {
   background-color: #f5f4fa;
 }
 
@@ -806,6 +806,66 @@ img {
 .socials__link--color:hover, .socials__link--color:focus {
   background-color: #2196f3;
   fill: #fff;
+}
+
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
+}
+
+.clients__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px;
+  width: calc((100% - 4 * 15px) / 2);
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 6 * 15px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 12 * 15px) / 6);
+  }
+}
+
+.clients__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  height: 92px;
+  fill: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  -webkit-transition-property: border-color, fill;
+  transition-property: border-color, fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients__link:hover, .clients__link:focus {
+  fill: #2196f3;
+  border-color: #2196f3;
 }
 
 .filter {
