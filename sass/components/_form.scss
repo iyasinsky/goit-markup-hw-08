@@ -1,96 +1,130 @@
-.form__title {
-  margin-bottom: 12px;
-
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: $secondaryTextColor;
-}
-
-.form__field {
-  position: relative;
+/* Форма модального вікна */
+.form {
   display: flex;
   flex-direction: column;
+}
+.form__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $secondary-color;
+  margin-bottom: 12px;
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
+}
+.form__field {
+  display: flex;
+  flex-direction: column-reverse;
   margin-bottom: 10px;
+  position: relative;
 }
-
-.form__field:focus-within .form__input,
-.form__field:focus-within .form__icon,
-.comment:focus-within .comment__area {
-  border-color: $accent;
-  fill: $accent;
-}
-
 .form__icon {
   position: absolute;
-  left: 12px;
   bottom: 11px;
-
-  @include transitioned(fill);
+  left: 12px;
+  @include transition(fill, null, null);
 }
 
-.form__name {
+.form__area {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  font-family: inherit;
+  font-size: $secondary-font-size;
+  color: $secondary-color;
+  outline: none;
+  @include transition(border-color, null, null);
+  &:focus {
+    border-color: $accent-color;
+    & + .form__icon {
+      fill: $accent-color;
+    }
+  }
+}
+.form__area--large {
+  @extend .form__area;
+  height: 120px;
+  padding: 12px 16px;
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+.form__field--large {
+  @extend .form__field;
+  margin-bottom: 20px;
+}
+
+.form__text {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-
-.form__input {
-  padding: 12px 16px 12px 42px;
-  height: 40px;
-  outline: none;
-
-  @include transitioned(border-color);
+.form__field--large textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
-
-.form__label {
-  display: flex;
-  align-items: center;
-  width: 425px;
-  margin-left: auto;
-  margin-right: auto;
-
+.consent {
+  display: inline-block;
+  text-align: center;
   margin-bottom: 30px;
-
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
   cursor: pointer;
 }
-
-.form__checkbox {
-  display: inline-block;
-  margin-right: 7px;
+.consent__text {
+  color: $primary-color;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  @media screen and (min-width: 1200px) {
+    font-size: $primary-font-size;
+    line-height: 1.71;
+  }
+}
+.consent__link {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+  margin-left: 3px;
+  @media screen and (min-width: 1200px) {
+    font-size: $primary-font-size;
+    line-height: 1.71;
+  }
+}
+.checkbox {
+  @extend %visually-hidden;
+}
+.consent__text::before {
+  content: "";
+  display: inline-flex;
   width: 16px;
   height: 15px;
-  border: 2px solid $secondaryTextColor;
-  border-radius: 2px;
-
-  $propertyLocal: background-color, border-color;
-  @include transitioned($propertyLocal);
+  border: 2px solid $secondary-color;
+  border-radius: 3px;
+  margin-right: 8px;
+  @include transition(border-color, null, null);
+  .checkbox:focus + &,
+  .checkbox:hover + & {
+    border-color: $accent-color;
+  }
+  .checkbox:checked + & {
+    background-color: $accent-color;
+    border-color: $accent-color;
+    background-image: url(../images/check.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
-
-.form__label:hover .form__checkbox,
-.form__label:focus-within .form__checkbox {
-  border-color: $accent;
-}
-
-.checkbox:checked + .form__checkbox {
-  background-color: $accent;
-  border-color: $accent;
-  background-image: url('../images/icon-check.svg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-}
-
-.form__link {
-  display: inline-flex;
-  margin-left: 5px;
-  color: $accent;
+.button--success {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }

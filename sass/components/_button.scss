@@ -1,95 +1,23 @@
 .button {
-  background-color: $accent;
-  color: $primaryColor;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  align-items: center;
-
-  border-radius: 4px;
+  @include centered(center, inline-flex);
   padding: 10px 32px;
   min-width: 200px;
-  height: 50px;
-  border: none;
 
-  @include transitioned(background-color);
-
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background-color: $buttonColor;
-  }
-}
-
-.filter__button {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  border: none;
+  color: $light-color;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0;
   border-radius: 4px;
-  padding: 6px 22px;
-  height: 38px;
-  min-width: 73px;
-
-  color: $secondaryTextColor;
-  background-color: $secondaryColor;
-
+  font-family: inherit;
+  font-weight: 700;
+  font-size: $secondary-font-size;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
   cursor: pointer;
 
-  $propertyLocal: color, background-color, box-shadow;
-  @include transitioned($propertyLocal);
-
+  @include transition(background-color, null, null);
   &:hover,
   &:focus {
-    background-color: $accent;
-    color: $primaryColor;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    background-color: $accent-btn;
   }
-
-  &--current {
-    background-color: $accent;
-    color: $primaryColor;
-  }
-}
-
-.modal__button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 6px;
-
-  width: 30px;
-  height: 30px;
-
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-
-  background-color: $primaryColor;
-
-  cursor: pointer;
-
-  @include transitioned(fill);
-
-  &:hover,
-  &:focus {
-    fill: $accent;
-  }
-}
-
-.form__button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }

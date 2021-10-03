@@ -4,242 +4,470 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebStudio</title>
+    <title>Portfolio</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./CSS/main.min.css" />
   </head>
 
   <body>
-    <header class="underline">
-      <div class="page-header container">
-        <nav class="nav">
-          <a class="logo logo__header" href="./index.html">Web<span class="logo__header--color">Studio</span></a>
-
-          <ul class="page-header__list nav-bar">
-            <li class="nav-bar__item"><a class="nav-bar__link" href="./index.html">Студия</a></li>
-            <li class="nav-bar__item"><a class="nav-bar__link nav-bar__current" href="./portfolio.html">Портфолио</a></li>
-            <li class="nav-bar__item"><a class="nav-bar__link" href="">Контакты</a></li>
-          </ul>
-        </nav>
-
-        <ul class="page-header__list page-header__contacts">
-          <li class="section__item">
-            <a class="page-header__link" href="mailto:info@devstudio.com">
-              <svg class="page-header__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-
-          <li class="section__item">
-            <a class="page-header__link" href="tel:+380961111111">
-              <svg class="page-header__icon" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+    <!-- Header section -->
+    <header class="header">
+      <div class="container header__container">
+        <a class="logo header__logo" lang="en" href="./index.html">
+          Web<span class="logo__text">Studio</span></a
+        >
+        <button
+          type="button"
+          class="menu-container__button menu-container__button--open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-container__icon" width="40" height="40">
+            <use href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button
+            type="button"
+            class="menu-container__button menu-container__button--close js-close-menu"
+          >
+            <svg class="menu-container__icon" width="40" height="40">
+              <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="header__nav">
+            <ul class="nav">
+              <li class="nav__item">
+                <a class="nav__link" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--current" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__contacts">
+            <ul class="contacts">
+              <li class="contacts__item contacts__item--mail">
+                <a class="contacts__link" lang="en" href="mailto:info@devstudio.com">
+                  <svg class="contacts__icon" width="16" height="12">
+                    <use href="./images/sprite.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__item contacts__item--tel">
+                <a class="contacts__link" href="tel:+380961111111">
+                  <svg class="contacts__icon" width="10" height="16">
+                    <use href="./images/sprite.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <div class="menu-socials">
+              <a class="menu-socials__link" href="#">Instagram</a>
+              <a class="menu-socials__link" href="#">Twitter</a>
+              <a class="menu-socials__link" href="#">Facebook</a>
+              <a class="menu-socials__link" href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
-
+    <!-- Main section -->
     <main>
       <section class="section">
         <div class="container">
-          <h1 class="visually-hidden">Портфолио</h1>
-          <ul class="filter">
-            <li class="filter__item">
-              <button class="filter__button filter__button--current" type="button">Все</button>
+          <h1 class="section__title visually-hidden">Нашы роботы</h1>
+          <!-- Filter buttons -->
+          <ul class="control">
+            <li class="control__item">
+              <button class="control__button control__button--active" type="button">Все</button>
             </li>
-            <li class="filter__item">
-              <button class="filter__button" type="button">Веб-сайты</button>
+            <li class="control__item">
+              <button class="control__button" type="button">Веб-сайты</button>
             </li>
-            <li class="filter__item">
-              <button class="filter__button" type="button">Приложения</button>
+            <li class="control__item">
+              <button class="control__button" type="button">Приложения</button>
             </li>
-            <li class="filter__item">
-              <button class="filter__button" type="button">Дизайн</button>
+            <li class="control__item">
+              <button class="control__button" type="button">Дизайн</button>
             </li>
-            <li class="filter__item">
-              <button class="filter__button" type="button">Маркетинг</button>
+            <li class="control__item">
+              <button class="control__button" type="button">Маркетинг</button>
             </li>
           </ul>
+          <!-- Products section -->
+          <ul class="grid">
+            <li class="grid__item">
+              <a class="product" href="">
+                <div class="product__thumb">
+                  <picture>
+                    <source
+                      srcset="./images/portf1-450.jpg 450w, ./images/portf1-900.jpg 900w"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                      sizes="100vw"
+                    />
+                    <source
+                      srcset="./images/portf1-354.jpg 354w, ./images/portf1-708.jpg 708w"
+                      media="(max-width: 1199px)"
+                      type="image/jpg"
+                      sizes="50vw"
+                    />
+                    <source
+                      srcset="./images/portf1-370.jpg 370w, ./images/portf1-740.jpg 740w"
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                      sizes="33vw"
+                    />
+                    <img
+                      src="./images/portf1-354.jpg"
+                      alt="Открытый macbook на котором показано страницу веб-сайта"
+                    />
+                  </picture>
 
-          <ul class="product">
-            <li class="product__item">
-              <a class="product__link" href="">
-                <div class="product__box">
-                  <img src="./images/tekhnokryak-project.jpg" alt="Технокряк" width="370" />
-                  <div class="product__overlay">
-                    <p class="product__text">
-                      Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
                     </p>
                   </div>
                 </div>
-                <div class="product__wrapper">
+                <div class="product__text">
                   <h2 class="product__title">Технокряк</h2>
-                  <p class="product__category">Веб-сайт</p>
+                  <p class="product__description">Веб-сайт</p>
                 </div>
               </a>
             </li>
+            <li class="grid__item">
+              <a class="product" href="">
+                <div class="product__thumb">
+                  <picture>
+                    <source
+                      srcset="./images/portf2-450.jpg 450w, ./images/portf2-900.jpg 900w"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                      sizes="100vw"
+                    />
+                    <source
+                      srcset="./images/portf2-354.jpg 354w, ./images/portf2-708.jpg 708w"
+                      media="(max-width: 1199px)"
+                      type="image/jpg"
+                      sizes="50vw"
+                    />
+                    <source
+                      srcset="./images/portf2-370.jpg 370w, ./images/portf2-740.jpg 740w"
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                      sizes="33vw"
+                    />
+                    <img
+                      src="./images/portf2-354.jpg"
+                      alt="Постер с изображением двух баскетболистов"
+                    />
+                  </picture>
 
-            <li class="product__item">
-              <a class="product__link" href="">
-                <div class="product__box">
-                  <img src="./images/basketball-match-poster.jpg" alt="Постер New Orlean vs Golden Star" width="370" />
-                  <div class="product__overlay">
-                    <p class="product__text">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim tempore quisquam quidem eius dolore vitae cum iure, fugiat asperiores pariatur earum, voluptas blanditiis
-                      distinctio obcaecati fuga itaque quis veniam accusantium. Hic ab quo illo consequuntur labore possimus totam provident est alias sapiente dolor qui, cumque atque error quasi?
-                      Aut, consequuntur.
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, delectus.
                     </p>
                   </div>
                 </div>
-                <div class="product__wrapper">
+
+                <div class="product__text">
                   <h2 class="product__title">Постер New Orlean vs Golden Star</h2>
-                  <p class="product__category">Дизайн</p>
+                  <p class="product__description">Дизайн</p>
                 </div>
               </a>
             </li>
+            <li class="grid__item">
+              <a class="product" href="">
+                <div class="product__thumb">
+                  <picture>
+                    <source
+                      srcset="./images/portf3-450.jpg 450w, ./images/portf3-900.jpg 900w"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                      sizes="100vw"
+                    />
+                    <source
+                      srcset="./images/portf3-354.jpg 354w, ./images/portf3-708.jpg 708w"
+                      media="(max-width: 1199px)"
+                      type="image/jpg"
+                      sizes="50vw"
+                    />
+                    <source
+                      srcset="./images/portf3-370.jpg 370w, ./images/portf3-740.jpg 740w"
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                      sizes="33vw"
+                    />
+                    <img
+                      src="./images/portf3-354.jpg"
+                      alt="Постер с логотипом на котором изображена рыба и название ресторана"
+                    />
+                  </picture>
 
-            <li class="product__item">
-              <a class="product__link" href="">
-                <div class="product__box">
-                  <img src="./images/seafood-restaurant.jpg" alt="Ресторан Seafood" width="370" />
-                  <div class="product__overlay">
-                    <p class="product__text">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim tempore quisquam quidem eius dolore vitae cum iure, fugiat asperiores pariatur earum, voluptas blanditiis
-                      distinctio obcaecati fuga itaque quis veniam accusantium. Hic ab quo illo consequuntur labore possimus totam provident est alias sapiente dolor qui, cumque atque error quasi?
-                      Aut, consequuntur.
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto corrupti
+                      vero dolorum quibusdam amet, iure ratione libero itaque tempora magni
+                      dignissimos rem quod corporis consectetur?.
                     </p>
                   </div>
                 </div>
-                <div class="product__wrapper">
+
+                <div class="product__text">
                   <h2 class="product__title">Ресторан Seafood</h2>
-                  <p class="product__category">Приложение</p>
+                  <p class="product__description">Приложение</p>
                 </div>
               </a>
             </li>
-
-            <li class="product__item">
-              <a class="product__link" href="">
-                <div class="product__box">
-                  <img src="./images/prime-project.jpg" alt="Проект Prime" width="370" />
-                  <div class="product__overlay">
-                    <p class="product__text">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim tempore quisquam quidem eius dolore vitae cum iure, fugiat asperiores pariatur earum, voluptas blanditiis
-                      distinctio obcaecati fuga itaque quis veniam accusantium. Hic ab quo illo consequuntur labore possimus totam provident est alias sapiente dolor qui, cumque atque error quasi?
-                      Aut, consequuntur.
+            <li class="grid__item">
+              <a class="product" href="">
+                <div class="product__thumb">
+                  <picture>
+                    <source
+                      srcset="./images/portf4-450.jpg 450w, ./images/portf4-900.jpg 900w"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                      sizes="100vw"
+                    />
+                    <source
+                      srcset="./images/portf4-354.jpg 354w, ./images/portf4-708.jpg 708w"
+                      media="(max-width: 1199px)"
+                      type="image/jpg"
+                      sizes="50vw"
+                    />
+                    <source
+                      srcset="./images/portf4-370.jpg 370w, ./images/portf4-740.jpg 740w"
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                      sizes="33vw"
+                    />
+                    <img
+                      src="./images/portf4-354.jpg"
+                      alt="Картинка беспроводных наушников черного цвета"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam dolore atque
+                      maxime. Perferendis culpa quia illo eum vero possimus quasi! Temporibus, velit
+                      explicabo! Est consectetur praesentium blanditiis libero distinctio in?
                     </p>
                   </div>
                 </div>
-                <div class="product__wrapper">
+
+                <div class="product__text">
                   <h2 class="product__title">Проект Prime</h2>
-                  <p class="product__category">Маркетинг</p>
+                  <p class="product__description">Маркетинг</p>
                 </div>
               </a>
             </li>
-
-            <li class="product__item">
-              <a class="product__link" href="">
-                <div class="product__box">
-                  <img src="./images/boxes-project.jpg" alt="Проект Boxes" width="370" />
-                  <div class="product__overlay">
-                    <p class="product__text">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim tempore quisquam quidem eius dolore vitae cum iure, fugiat asperiores pariatur earum, voluptas blanditiis
-                      distinctio obcaecati fuga itaque quis veniam accusantium. Hic ab quo illo consequuntur labore possimus totam provident est alias sapiente dolor qui, cumque atque error quasi?
-                      Aut, consequuntur.
-                    </p>
+            <li class="grid__item">
+              <a class="product" href="">
+                <div class="product__thumb">
+                  <picture>
+                    <source
+                      srcset="./images/portf5-450.jpg 450w, ./images/portf5-900.jpg 900w"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                      sizes="100vw"
+                    />
+                    <source
+                      srcset="./images/portf5-354.jpg 354w, ./images/portf5-708.jpg 708w"
+                      media="(max-width: 1199px)"
+                      type="image/jpg"
+                      sizes="50vw"
+                    />
+                    <source
+                      srcset="./images/portf5-370.jpg 370w, ./images/portf5-740.jpg 740w"
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                      sizes="33vw"
+                    />
+                    <img
+                      src="./images/portf5-354.jpg"
+                      alt="Две картонных коробки с логотипами компании"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__text">Lorem ipsum dolor sit amet.</p>
                   </div>
                 </div>
-                <div class="product__wrapper">
+
+                <div class="product__text">
                   <h2 class="product__title">Проект Boxes</h2>
-                  <p class="product__category">Приложение</p>
+                  <p class="product__description">Приложение</p>
                 </div>
               </a>
             </li>
-
-            <li class="product__item">
-              <a class="product__link" href="">
-                <div class="product__box">
-                  <img src="./images/inspiration-has-no-borders-project.jpg" alt="Inspiration has no Borders" width="370" />
-                  <div class="product__overlay">
-                    <p class="product__text">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim tempore quisquam quidem eius dolore vitae cum iure, fugiat asperiores pariatur earum, voluptas blanditiis
-                      distinctio obcaecati fuga itaque quis veniam accusantium. Hic ab quo illo consequuntur labore possimus totam provident est alias sapiente dolor qui, cumque atque error quasi?
-                      Aut, consequuntur.
+            <li class="grid__item">
+              <a class="product" href="">
+                <div class="product__thumb">
+                  <picture>
+                    <source
+                      srcset="./images/portf6-450.jpg 450w, ./images/portf6-900.jpg 900w"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                      sizes="100vw"
+                    />
+                    <source
+                      srcset="./images/portf6-354.jpg 354w, ./images/portf6-708.jpg 708w"
+                      media="(max-width: 1199px)"
+                      type="image/jpg"
+                      sizes="50vw"
+                    />
+                    <source
+                      srcset="./images/portf6-370.jpg 370w, ./images/portf6-740.jpg 740w"
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                      sizes="33vw"
+                    />
+                    <img
+                      src="./images/portf6-354.jpg"
+                      alt="Монитор от apple на котором показано веб-сайт"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod officiis quis
+                      dolorum minus corrupti odit?
                     </p>
                   </div>
                 </div>
-                <div class="product__wrapper">
+
+                <div class="product__text">
                   <h2 class="product__title">Inspiration has no Borders</h2>
-                  <p class="product__category">Веб-сайт</p>
+                  <p class="product__description">Веб-сайт</p>
                 </div>
               </a>
             </li>
-
-            <li class="product__item">
-              <a class="product__link" href="">
-                <div class="product__box">
-                  <img src="./images/limited-edition-pub.jpg" alt="Издание Limited Edition" width="370" />
-                  <div class="product__overlay">
-                    <p class="product__text">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim tempore quisquam quidem eius dolore vitae cum iure, fugiat asperiores pariatur earum, voluptas blanditiis
-                      distinctio obcaecati fuga itaque quis veniam accusantium. Hic ab quo illo consequuntur labore possimus totam provident est alias sapiente dolor qui, cumque atque error quasi?
-                      Aut, consequuntur.
+            <li class="grid__item">
+              <a class="product" href="">
+                <div class="product__thumb">
+                  <picture>
+                    <source
+                      srcset="./images/portf7-450.jpg 450w, ./images/portf7-900.jpg 900w"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                      sizes="100vw"
+                    />
+                    <source
+                      srcset="./images/portf7-354.jpg 354w, ./images/portf7-708.jpg 708w"
+                      media="(max-width: 1199px)"
+                      type="image/jpg"
+                      sizes="50vw"
+                    />
+                    <source
+                      srcset="./images/portf7-370.jpg 370w, ./images/portf7-740.jpg 740w"
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                      sizes="33vw"
+                    />
+                    <img src="./images/portf7-354.jpg" alt="Открытая книга" />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus molestiae
+                      nostrum, fuga odio animi optio ratione corporis, rerum dolore, alias ipsa
+                      dolor debitis. Eveniet consequatur, soluta magnam ducimus minus beatae
+                      recusandae at. Veritatis asperiores consequatur sit quas exercitationem eius
+                      sequi?.
                     </p>
                   </div>
                 </div>
-                <div class="product__wrapper">
+
+                <div class="product__text">
                   <h2 class="product__title">Издание Limited Edition</h2>
-                  <p class="product__category">Дизайн</p>
+                  <p class="product__description">Дизайн</p>
                 </div>
               </a>
             </li>
-
-            <li class="product__item">
-              <a class="product__link" href="">
-                <div class="product__box">
-                  <img src="./images/lab-project.jpg" alt="Проект LAB" width="370" />
-                  <div class="product__overlay">
-                    <p class="product__text">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim tempore quisquam quidem eius dolore vitae cum iure, fugiat asperiores pariatur earum, voluptas blanditiis
-                      distinctio obcaecati fuga itaque quis veniam accusantium. Hic ab quo illo consequuntur labore possimus totam provident est alias sapiente dolor qui, cumque atque error quasi?
-                      Aut, consequuntur.
+            <li class="grid__item">
+              <a class="product" href="">
+                <div class="product__thumb">
+                  <picture>
+                    <source
+                      srcset="./images/portf8-450.jpg 450w, ./images/portf8-900.jpg 900w"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                      sizes="100vw"
+                    />
+                    <source
+                      srcset="./images/portf8-354.jpg 354w, ./images/portf8-708.jpg 708w"
+                      media="(max-width: 1199px)"
+                      type="image/jpg"
+                      sizes="50vw"
+                    />
+                    <source
+                      srcset="./images/portf8-370.jpg 370w, ./images/portf8-740.jpg 740w"
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                      sizes="33vw"
+                    />
+                    <img src="./images/portf8-354.jpg" alt="Белая бирка с лого LAB" />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nobis
+                      fugiat iusto odio necessitatibus nam qui ab magni voluptates excepturi.
                     </p>
                   </div>
                 </div>
-                <div class="product__wrapper">
+
+                <div class="product__text">
                   <h2 class="product__title">Проект LAB</h2>
-                  <p class="product__category">Маркетинг</p>
+                  <p class="product__description">Маркетинг</p>
                 </div>
               </a>
             </li>
-
-            <li class="product__item">
-              <a class="product__link" href="">
-                <div class="product__box">
-                  <img src="./images/growing-business-project.jpg" alt="Growing Business" width="370" />
-                  <div class="product__overlay">
-                    <p class="product__text">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim tempore quisquam quidem eius dolore vitae cum iure, fugiat asperiores pariatur earum, voluptas blanditiis
-                      distinctio obcaecati fuga itaque quis veniam accusantium. Hic ab quo illo consequuntur labore possimus totam provident est alias sapiente dolor qui, cumque atque error quasi?
-                      Aut, consequuntur.
+            <li class="grid__item">
+              <a class="product" href="">
+                <div class="product__thumb">
+                  <picture>
+                    <source
+                      srcset="./images/portf9-450.jpg 450w, ./images/portf9-900.jpg 900w"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                      sizes="100vw"
+                    />
+                    <source
+                      srcset="./images/portf9-354.jpg 354w, ./images/portf9-708.jpg 708w"
+                      media="(max-width: 1199px)"
+                      type="image/jpg"
+                      sizes="50vw"
+                    />
+                    <source
+                      srcset="./images/portf9-370.jpg 370w, ./images/portf9-740.jpg 740w"
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                      sizes="33vw"
+                    />
+                    <img
+                      src="./images/portf9-354.jpg"
+                      alt="Кисти рук мужчины который роботает за macbook"
+                    />
+                  </picture>
+                  <div class="overlay">
+                    <p class="overlay__text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, debitis.
                     </p>
                   </div>
                 </div>
-                <div class="product__wrapper">
+
+                <div class="product__text">
                   <h2 class="product__title">Growing Business</h2>
-                  <p class="product__category">Приложение</p>
+                  <p class="product__description">Приложение</p>
                 </div>
               </a>
             </li>
@@ -247,81 +475,81 @@
         </div>
       </section>
     </main>
-
     <!-- Footer section -->
-    <footer class="page-footer">
-      <div class="container page-footer__box">
-        <div>
-          <a href="./index.html" class="logo logo__footer">Web<span class="logo__footer--color">Studio</span></a>
-
-          <address class="contacts">
-            <p class="contacts__text">г. Киев, пр-т Леси Украинки, 26</p>
-
-            <ul class="contacts__list">
-              <li class="contacts__item">
-                <a class="contacts__link" href="mailto:info@example.com">info@example.com</a>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__desktop">
+          <div class="footer__block">
+            <a class="logo footer__logo" lang="en" href="./index.html">
+              Web<span class="logo__text--inversion">Studio</span></a
+            >
+            <address class="adress">
+              <p class="adress__text">г. Киев, пр-т Леси Украинки, 26</p>
+              <ul class="adress__list">
+                <li class="adress__item">
+                  <a class="adress__link" lang="en" href="mailto:info@devstudio.com">
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="adress__item">
+                  <a class="adress__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="block">
+            <p class="block__text">присоединяйтесь</p>
+            <ul class="socials">
+              <li class="socials__item">
+                <a class="socials__link socials__link--dark" href="">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-
-              <li class="contacts__item">
-                <a class="contacts__link" href="tel:+380991111111">+38 099 111 11 11</a>
+              <li class="socials__item">
+                <a class="socials__link socials__link--dark" href="">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--dark" href="">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--dark" href="">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <div class="page-footer__box--indent">
-          <p class="page-footer__title">присоединяйтесь</p>
-
-          <ul class="section__list">
-            <li class="socials__list">
-              <a class="socials__link socials__link--color" href="">
-                <svg width="20" height="20">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="socials__list">
-              <a class="socials__link socials__link--color" href="">
-                <svg width="20" height="20">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="socials__list">
-              <a class="socials__link socials__link--color" href="">
-                <svg width="20" height="20">
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="socials__list">
-              <a class="socials__link socials__link--color" href="">
-                <svg width="20" height="20">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <form class="page-footer__form js-user-form">
-          <p class="page-footer__title">Подпишитесь на рассылку</p>
-          <div class="page-footer__box--type">
-            <label class="page-footer__label">
-              <input class="page-footer__input" type="email" name="mail" placeholder="E-mail" />
-            </label>
-            <button class="button page-footer__box--type" type="submit">
-              Подписаться
-              <svg class="page-footer__icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
-            </button>
           </div>
+        </div>
+
+        <form class="block block--form js-speaker-form">
+          <p class="block__text">Подпишитесь на рассылку</p>
+          <input type="email" name="email" class="block__email" placeholder="E-mail" />
+          <button type="submit" class="button block__button">
+            Подписаться
+            <svg class="block__icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

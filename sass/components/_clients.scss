@@ -1,50 +1,43 @@
-.clients {
-  @extend %sectionPadding;
-}
-
-.clients__title {
-  @extend %mainTitle;
-}
-
-.clients__list {
-  display: flex;
+.section__list--client {
   flex-wrap: wrap;
   margin: -15px;
-
-  @extend %listReset;
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    flex-wrap: nowrap;
+  }
 }
-
-.clients__item {
-  display: flex;
-  justify-content: center;
-  margin: 15px;
+.section__item--client {
   width: calc((100% - 4 * 15px) / 2);
-
-  @media screen and (min-width: 768px) {
+  margin: 15px;
+  @include centered(center);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: calc((100% - 6 * 15px) / 3);
   }
-
   @media screen and (min-width: 1200px) {
-    width: calc((100% - 12 * 15px) / 6);
+    margin: 0;
   }
 }
-
-.clients__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
+.section__link {
+  @include centered(center);
+  width: 210px;
   height: 92px;
-  fill: $linkColor;
-  border: 1px solid $linkColor;
+  border: 1px solid #afb1b8;
   border-radius: 4px;
-
-  $propertyLocal: border-color, fill;
-  @include transitioned($propertyLocal);
-
+  color: $icon-color;
+  @extend %link;
+  @include transition(color, border-color, null);
   &:hover,
   &:focus {
-    fill: $accent;
-    border-color: $accent;
+    color: $accent-color;
+    border-color: $accent-color;
   }
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
+}
+.section__icon {
+  fill: currentColor;
 }
