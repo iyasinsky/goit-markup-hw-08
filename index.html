@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <!-- Header section -->
+    <!--Шапка сайту-->
     <header class="header">
       <div class="container header__container">
         <a class="logo header__logo" lang="en" href="./index.html">
@@ -92,16 +92,16 @@
         </div>
       </div>
     </header>
-    <!-- Main section -->
+    <!--Контент сайту-->
     <main>
-      <!-- Hero section -->
+      <!--Секція герой-->
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-section__title">Эффективные решения для вашего бизнеса</h1>
           <button class="button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
-      <!-- Features section -->
+      <!--Переваги компанії-->
       <section class="section">
         <div class="container">
           <h2 class="section__title visually-hidden">Особенности компании</h2>
@@ -153,7 +153,7 @@
           </ul>
         </div>
       </section>
-      <!-- What we do section -->
+      <!--Чим займається компанія-->
       <section class="section section--narrow">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
@@ -197,7 +197,7 @@
           </ul>
         </div>
       </section>
-      <!-- Team section -->
+      <!-- Картки членів команди -->
       <section class="section section--dark-theme">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
@@ -205,10 +205,10 @@
             <li class="section__item section__item--dark-theme">
               <img
                 class="card__image"
-                srcset="./images/img1-450.jpg 450w, ./images/img1-900.jpg 900w"
+                srcset="./images/img1-450.jpg 1x ./images/img1-900.jpg 2x"
                 src="./images/img1-450.jpg"
                 alt="Игорь Демьяненко"
-                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                width="270"
               />
               <div class="card__text">
                 <h3 class="card__title">Игорь Демьяненко</h3>
@@ -248,10 +248,10 @@
             <li class="section__item section__item--dark-theme">
               <img
                 class="card__image"
-                srcset="./images/img2-450.jpg 450w, ./images/img2-900.jpg 900w"
+                srcset="./images/img2-450.jpg 1x, ./images/img2-900.jpg 2x"
                 src="./images/img2-450.jpg"
                 alt="Ольга Репина"
-                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                width="270"
               />
               <div class="card__text">
                 <h3 class="card__title">Ольга Репина</h3>
@@ -291,10 +291,10 @@
             <li class="section__item section__item--dark-theme">
               <img
                 class="card__image"
-                srcset="./images/img3-450.jpg 450w, ./images/img3-900.jpg 900w"
+                srcset="./images/img3-450.jpg 1x, ./images/img3-900.jpg 2x"
                 src="./images/img3-450.jpg"
                 alt="Николай Тарасов"
-                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                width="270"
               />
               <div class="card__text">
                 <h3 class="card__title">Николай Тарасов</h3>
@@ -334,10 +334,10 @@
             <li class="section__item section__item--dark-theme">
               <img
                 class="card__image"
-                srcset="./images/img4-450.jpg 450w, ./images/img4-900.jpg 900w"
+                srcset="./images/img4-450.jpg 1x, ./images/img4-900.jpg 2x"
                 src="./images/img4-450.jpg"
                 alt="Михаил Ермаков"
-                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                width="270"
               />
               <div class="card__text">
                 <h3 class="card__title">Михаил Ермаков</h3>
@@ -377,7 +377,7 @@
           </ul>
         </div>
       </section>
-      <!-- Clients section -->
+      <!-- Клієнти -->
       <section class="section">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
@@ -428,7 +428,7 @@
         </div>
       </section>
     </main>
-    <!-- Footer section -->
+    <!-- Нижній колонтитул сайту -->
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__desktop">
@@ -497,7 +497,7 @@
         </form>
       </div>
     </footer>
-    <!--  Modal window -->
+    <!--  Модальне вікно -->
     <div class="backdrop backdrop--hidden" data-modal>
       <div class="modal">
         <button class="modal__button-close" type="button" data-modal-close>
@@ -547,7 +547,6 @@
         </form>
       </div>
     </div>
-    <!-- JS -->
     <script src="./js/modal.js"></script>
     <script src="./js/speaker-form.js"></script>
     <script src="./js/mobile-menu.js"></script>
